@@ -10,10 +10,10 @@ public class CommentServiceImpl implements CommentService {
 	@Inject @Named("value")
 	private String value;
 	
-	/*@Inject
+	@Inject
 	public CommentServiceImpl(@Named("value")String value) {
 		this.value = value;
-	}*/
+	}
 	
 	@Override
 	public void comment() {
