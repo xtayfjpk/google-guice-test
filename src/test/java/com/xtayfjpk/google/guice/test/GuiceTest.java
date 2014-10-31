@@ -25,4 +25,11 @@ public class GuiceTest {
 		BillingService billingService = injector.getInstance(BillingService.class);
 		billingService.bill();
 	}
+	
+	@Test
+	public void testInstanceBidnings() throws Exception {
+		Injector injector = Guice.createInjector(new CommentModule());
+		CommentService commentService = injector.getInstance(CommentService.class);
+		commentService.comment2();
+	}
 }

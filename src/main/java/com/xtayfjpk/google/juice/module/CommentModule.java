@@ -1,6 +1,7 @@
 package com.xtayfjpk.google.juice.module;
 
 import com.google.inject.AbstractModule;
+import com.google.inject.name.Names;
 import com.xtayfjpk.google.juice.dao.CommentDao;
 import com.xtayfjpk.google.juice.dao.CommentDaoImpl;
 import com.xtayfjpk.google.juice.service.CommentService;
@@ -12,6 +13,7 @@ public class CommentModule extends AbstractModule {
 	protected void configure() {
 		this.bind(CommentDao.class).to(CommentDaoImpl.class);
 		this.bind(CommentService.class).to(CommentServiceImpl.class);
+		this.bind(String.class).annotatedWith(Names.named("value")).toInstance("hello guice");
 	}
 
 }
