@@ -10,7 +10,7 @@ public class DatabaseTransactionLogProvider implements Provider<TransactionLog> 
 
 	@Override
 	public TransactionLog get() {
-		System.out.println(value);
+		System.out.println("value in transaction log=" + value);
 		return new DatabaseTransactionLog();
 	}
 
